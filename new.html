@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Facts Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Random Facts Generator</h1>
+    </header>
+    
+    <section id="fact-display">
+        <p id="fact">Click the button to generate a random fact!</p>
+        <button id="generate-fact">Generate Fact</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Random Facts Generator</p>
+    </footer>
+
+    <script>
+        const facts = [
+            "Honey never spoils.",
+            "A group of flamingos is called a 'flamboyance'.",
+            "Bananas are berries, but strawberries aren't.",
+            "Octopuses have three hearts.",
+            "The Eiffel Tower can be 15 cm taller during the summer.",
+            "A day on Venus is longer than a year on Venus.",
+            "Wombat poop is cube-shaped.",
+            "The shortest war in history lasted 38 minutes."
+        ];
+
+        document.getElementById('generate-fact').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
